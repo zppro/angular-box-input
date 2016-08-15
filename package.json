@@ -1,0 +1,24 @@
+{
+  "name": "angular-box-input",
+  "version": "0.0.1",
+  "description": "angular input usage for some of the scenes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "box-input",
+    "angular"
+  ],
+  "author": "zppro",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sync": "^0.1.4",
+    "gulp-util": "^3.0.7"
+  }
+}
