@@ -1,4 +1,4 @@
-This repo is the angular input usage for some of the scenes.
+This repo is the angular input usage for some of the scenes.see <big>[demo](http://sandbox.runjs.cn/show/lxrpul7l)</big>.
 
 ## How to use
 
