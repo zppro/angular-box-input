@@ -1,0 +1,26 @@
+extends ./layout.jade
+block content
+    div(ng-controller="DemoBoxInputController")
+        form.form-validate(role='form', name="theForm", novalidate='', ng-submit="")
+            .panel
+                fieldset: .form-group
+                fieldset: .form-group
+                    <!--身份证号-->
+                    label.col-md-2.control-label 身份证/zip-code:
+                    .col-md-10
+                        input.form-control(type='text', name='id_no',ng-model='vm.id_no',required='',maxlength="18",box-input,id-no2)
+                        span.text-danger(ng-show="utils.vinput(this.theForm,'id_no','required')") 必填/required;
+                        span.text-danger(ng-show="utils.vinput(this.theForm,'id_no','IDNo')") 身份证格式不正确/ID-NO format error;
+                fieldset: .form-group
+                    <!--性别-->
+                    label.col-md-2.control-label 性别/sex: {{vm.sex}}
+                    .col-md-10
+                        .btn-group
+                            label.btn.btn-primary(ng-repeat="sex in vm.sexes",ng-class='{active: sex.value == vm.sex}') {{sex.name}}
+                                input.hidden(type="radio",name='sex',ng-model="vm.sex" ng-value="sex.value",extract-sex="vm.id_no")
+                fieldset: .form-group
+                    <!--出生日期-->
+                    label.col-md-2.control-label 出生日期/birthday:
+                    .col-md-2
+                        input.form-control(type="text",name='birthday',ng-model="vm.birthday" ,required='',extract-birthday="vm.id_no")
+                        span.text-danger(ng-show="utils.vinput(this.theForm,'birthday','required')") 必填/required;

@@ -1,0 +1,12 @@
+extends ./layout.jade
+block content
+    form.form-validate(role='form', name="theForm", novalidate='', ng-submit="")
+        .panel
+            fieldset: .form-group
+            fieldset: .form-group
+                <!--邮政编码-->
+                label.col-md-2.control-label 输入/input zip-code:
+                .col-md-10
+                    input(type='text', name='zip_code',ng-model='vm.zip_code',required='',maxlength="6",box-input)
+                    span.text-danger(ng-show="utils.vinput(this.theForm,'id_no','required')") 必填/required;
+            fieldset: .form-group

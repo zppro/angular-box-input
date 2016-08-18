@@ -1,0 +1,79 @@
+/**
+ * Created by zppro on 16-8-18.
+ *
+ * angular-box-input common
+ *
+ * Author: @zppro
+ * Website: https://github.com/zppro
+ * License: GPL-2.0
+ */
+html{
+  font-size:62.5%;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+ul,li{
+  list-style: none;
+  margin :0;
+  padding:0;
+}
+#header {
+  width:100%;
+  padding: 10px;
+  padding-top:0;
+  position: absolute;
+  height: 70px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-color: darkgrey;
+  box-shadow: 0 0 4px gray;
+  box-sizing: border-box;
+}
+#container{
+  display: flex;
+  padding-top:70px;
+  .container-children-shared-part(){
+    padding:20px;
+    font-size:1.6rem;
+    box-sizing: border-box;
+  }
+
+  #left-sidebar {
+    .container-children-shared-part;
+    width:200px;
+    background-color: whitesmoke;
+
+    height: 500px;
+  }
+  #content {
+    .container-children-shared-part;
+    flex: 1;
+  }
+}
+
+.btn.active, .btn:active {
+  background-color: orange;
+  border-color: orange;
+}
+fieldset {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #eee;
+  margin-bottom: 20px;
+  &.last-child,
+  &:last-child {
+    border-bottom: 0;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+a.active {
+  text-decoration: underline;
+  &:before {
+    content: ' ★ '
+  }
+}
+
+@import "lib/box-input";

@@ -1,0 +1,46 @@
+/**
+ * Created by zppro on 16-8-15.
+ *
+ * angular-box-input control implements
+ *
+ * Author: @zppro
+ * Website: https://github.com/zppro
+ * License: GPL-2.0
+ */
+@box-padding-vertical:                   6px;
+@box-padding-horizontal:                 16px;
+
+@box-width:                               36px;
+@box-height:                              36px;
+@box-background-color:                    #FFFFFF;
+@box-focus-background-color:              #FFFECF;
+
+.virbox {
+  display: block;
+  span {
+    width: @box-width;
+    height: @box-height;
+    padding: @box-padding-vertical @box-padding-horizontal;
+    display: block;
+    border: 1px solid #ccc;
+    float: left;
+    border-right: 0 none;
+    text-align: center;
+    font-weight: bold;
+    background-color: @box-background-color;
+    &.focus {
+      background-color: @box-focus-background-color;
+    }
+  }
+  span:last-child {
+    border: 1px solid #ccc;
+  }
+}
+
+.realbox {
+  width: 0px;
+  display: block;
+  position: fixed;
+  top: -30px;
+  left: -30px;
+}
